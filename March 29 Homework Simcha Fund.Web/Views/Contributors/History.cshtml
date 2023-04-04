@@ -1,0 +1,36 @@
+﻿@model ContributorViewModel
+
+<div class="header">
+    <h1>History for @Model.Name</h1>
+    <h3>Current Balance: @Model.Balance.ToString("C")</h3>
+</div>
+
+<div class="row header">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Action</th>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+            @foreach (var t in Model.Transactions)
+            {
+                <tr> 
+                    <td>@t.Action</td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        @t.Date.ToShortDateString()
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        @t.Amount.ToString("C")
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+    </div>
+</div>
+
+<div style="text-align:center;">
+    <a class="btn btn-lg btn-danger" href="/home/contributors">Back to Contributors</a>
+</div>

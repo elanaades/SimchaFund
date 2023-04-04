@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>March_29_Homework_Simcha_Fund.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\March 29 Homework Simcha Fund.Data\March 29 Homework Simcha Fund.Data.csproj" />
+  </ItemGroup>
+
+</Project>
