@@ -87,7 +87,7 @@
     function editContributorFormValidity() {
         $(".btn-primary").prop('disabled', false);
 
-        $('.modal-body').on('change', function () {
+        $('.modal-body').on('input', function () {
             const firstName = $(this).find('#contributor_first_name').val();
             const lastName = $(this).find('#contributor_last_name').val();
             const cell = $(this).find('#contributor_cell_number').val();
