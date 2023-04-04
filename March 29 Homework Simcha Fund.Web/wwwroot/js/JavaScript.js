@@ -85,16 +85,15 @@
     }
 
     function editContributorFormValidity() {
-        $(".btn-primary").prop('disabled', false);
 
         $('.modal-body').on('input', function () {
-            const firstName = $(this).find('#contributor_first_name').val();
-            const lastName = $(this).find('#contributor_last_name').val();
-            const cell = $(this).find('#contributor_cell_number').val();
-            const deposit = $(this).find('input[name="initialDeposit"]').val();
+            const firstName = $(this).find('#contributor_first_name').val().trim();
+            const lastName = $(this).find('#contributor_last_name').val().trim();
+            const cell = $(this).find('#contributor_cell_number').val().trim();
             const date = $(this).find('#contributor_created_at').val();
 
-            const isValid = firstName && lastName && cell && deposit && date && isValidNum(deposit);
+            const isValid = firstName && lastName && cell && date;
+            console.log(isValid);
             $(".btn-primary").prop('disabled', !isValid);
         })
     }
