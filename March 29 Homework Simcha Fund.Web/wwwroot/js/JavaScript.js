@@ -93,7 +93,6 @@
             const date = $(this).find('#contributor_created_at').val();
 
             const isValid = firstName && lastName && cell && date;
-            console.log(isValid);
             $(".btn-primary").prop('disabled', !isValid);
         })
     }
